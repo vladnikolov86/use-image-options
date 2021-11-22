@@ -1,6 +1,6 @@
 {
   "name": "use-image-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom React Hook for loading images based on fetch API",
   "main": "index.js",
   "files": [
@@ -16,7 +16,8 @@
     "react",
     "react-hooks",
     "image",
-    "fetch"
+    "fetch",
+    "react-konva"
   ],
   "license": "MIT",
   "bugs": {

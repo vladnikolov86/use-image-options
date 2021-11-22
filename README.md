@@ -1,49 +1,44 @@
-# useImage React Hook
+# useImageOptions React Hook
 
-Custom React Hook for loading images. It loads passed `url` and creates DOM image with such `src`.
+Custom React Hook for loading images based on fetch API. It accepts image url and options and returns HTMLImageElement.
 Useful for canvas application like `react-konva`.
-
-[Open image demo](https://konvajs.org/docs/react/Images.html)
 
 ## Install
 
 ```bash
-npm install use-image
+npm install use-image-options
 ```
-
 
 ## Usage
 
 ```js
-import React from 'react';
-import { Image } from 'react-konva';
-import useImage from 'use-image';
+import React from "react";
+import { Image } from "react-konva";
+import useImageOptions from "use-image-options";
 
-const url = 'https://konvajs.github.io/assets/yoda.jpg';
+const url = "https://someimageurl";
 
-function SimpleApp() {  
-  const [image] = useImage(url);
+function SimpleApp() {
+  const [image] = useImage(url, options);
 
-  // "image" will DOM image element or undefined
-
-  return (
-    <Image image={image} />
-  );
+  return <Image image={image} />;
 }
 
 function ComplexApp() {
-  // set crossOrigin of image as second argument
-  const [image, status] = useImage(url, 'anonymous');
+  const options = {
+    mode: "cors",
+    headers: {
+      "Cache-Control": "max-age=3600",
+    },
+    credentials: "omit",
+    cache: "force-cache",
+  };
+  const [image, status] = useImage(url, "anonymous");
 
   // status can be "loading", "loaded" or "failed"
-
-  return (
-    <Image image={image} />
-  );
+  return <Image image={image} />;
 }
 ```
-
-
 
 ## License
 
