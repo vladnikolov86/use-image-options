@@ -1,0 +1,30 @@
+{
+  "name": "use-image-options",
+  "version": "1.0.0",
+  "description": "Custom React Hook for loading images based on fetch API",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvn050/use-image-options.git"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "image",
+    "fetch"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvn050/use-image-options/issues"
+  },
+  "homepage": "https://github.com/vvn050/use-image-options",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17",
+    "react-dom": "^16.8.0 || ^17"
+  }
+}
