@@ -18,13 +18,7 @@ import useImageOptions from "use-image-options";
 
 const url = "https://someimageurl";
 
-function SimpleApp() {
-  const [image] = useImage(url, options);
-
-  return <Image image={image} />;
-}
-
-function ComplexApp() {
+function ExampleUsage() {
   const options = {
     mode: "cors",
     headers: {
