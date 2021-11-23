@@ -27,7 +27,7 @@ function ExampleUsage() {
     credentials: "omit",
     cache: "force-cache",
   };
-  const [image, status] = useImage(url, "anonymous");
+  const [image, status] = useImage(url, options);
 
   // status can be "loading", "loaded" or "failed"
   return <Image image={image} />;
