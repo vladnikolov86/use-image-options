@@ -14,20 +14,19 @@ npm install use-image-options
 ```js
 import React from "react";
 import { Image } from "react-konva";
-import useImageOptions from "use-image-options";
+import { useImageOptions, IOptions } from "use-image-options";
 
 const url = "https://someimageurl";
 
 function ExampleUsage() {
-  const options = {
-    mode: "cors",
+  const options: IOptions = {
     headers: {
-      "Cache-Control": "max-age=3600",
+      "Cache-Control": "no-cache",
     },
-    credentials: "omit",
-    cache: "force-cache",
+    mode: "cors",
+    cache: "no-cache",
   };
-  const [image, status] = useImage(url, options);
+  const [image, status] = useImageOptions(url, options);
 
   // status can be "loading", "loaded" or "failed"
   return <Image image={image} />;

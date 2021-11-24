@@ -1,6 +1,6 @@
 {
   "name": "use-image-options",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Custom React Hook for loading images based on fetch API",
   "main": "index.js",
   "files": [
