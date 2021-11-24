@@ -1,7 +1,7 @@
 const React = require("react");
 const defaultState = { image: undefined, status: "loading" };
 
-module.exports = function useImageOptions(url, options) {
+module.exports = function useImageOptions(url, options = {}) {
   const {
     mode = "cors",
     headers = {},
